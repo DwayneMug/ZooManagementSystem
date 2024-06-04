@@ -1,0 +1,79 @@
+// Animal class
+public class Animal {
+    String name;
+    int age;
+
+    public void makeSound() {
+        System.out.println("Animal noise");
+    }
+
+    public void eat() {
+        System.out.println("Animal is munching");
+    }
+
+    public void makeSound(int times) {
+        for (int i = 0; i < times; i++) {
+            makeSound();
+        }
+    }
+
+    public void eat(String foodType) {
+        System.out.println("Animal is munching " + foodType);
+    }
+}
+
+// Lion subclass
+public class Lion extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Roar");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating meat");
+    }
+}
+
+// Elephant subclass
+public class Elephant extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Trumpet");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating grass");
+    }
+}
+
+// Monkey subclass
+public class Monkey extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Chatter");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Eating bananas");
+    }
+}
+
+// Zoo class
+public class Zoo {
+    public static void main(String[] args) {
+        Lion lion = new Lion();
+        lion.makeSound();
+        lion.eat();
+
+        Elephant elephant = new Elephant();
+        elephant.makeSound();
+        elephant.eat();
+
+        Monkey monkey = new Monkey();
+        monkey.makeSound();
+        monkey.eat();
+    }
+}
