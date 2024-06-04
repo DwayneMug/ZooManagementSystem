@@ -1,0 +1,41 @@
+import java.sql.*;
+import javax.swing.*;
+
+public class LibrarySystem {
+    // Database connection variables
+    private static final String DATABASE_URL = "jdbc:ucanaccess://path_to_your_database_file.accdb";
+    private Connection connection = null;
+    private Statement statement = null;
+    private ResultSet resultSet = null;
+
+    // GUI components
+    private JFrame frame;
+    private JTextField bookIDField;
+    private JTextField titleField;
+    private JTextField authorField;
+    private JTextField yearField;
+    private JButton addButton;
+    private JButton deleteButton;
+    private JButton refreshButton;
+    private JTable bookTable;
+
+    public LibrarySystem() {
+        // GUI components and database connection
+    }
+
+    private void addBook() {
+        // Here we insert a new book record into the database
+    }
+
+    private void deleteBook() {
+        // Here, we can delete the selected book record from the database
+    }
+
+    private void viewBooks() {
+        // Here, we retrieve and display all book records in the table
+    }
+
+    public static void main(String[] args) {
+        new LibrarySystem();
+    }
+}
